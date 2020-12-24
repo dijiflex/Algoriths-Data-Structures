@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code roads survey form</title>
+</head>
+<style>
+    #title{
+        text-align: center;
+        font-family: monospace;
+        font-size:50px;
+        text-transform: capitalize;
+        color:limegreen;
+        text-decoration: underline;
+        background: gold;
+    }
+    p{
+        font-size:20px;
+        font-family: monospace;
+    }
+    label{
+        font-size:20px;
+        font-family: monospace;
+    }
+    #description{
+        font-size:20px;
+        font-family: monospace;
+    }
+    #survey-form{
+        border:4px solid magenta;
+        padding:4% 6% 3% 3%;
+        background: rgba(121, 78, 4, 0.247);
+        margin-left:15%;
+        margin-right:5%;
+        margin-top:5%;
+        border-radius: 5%;
+        width:60%;
+    }
+    #name{
+        border:2px solid green;
+        width:55%;
+        height:28px;
+        font-family: monospace;
+    }
+    #email{
+        border:2px solid green;
+        width:55%;
+        height:28px;
+        font-family: monospace;
+    }
+    /*validated email*/
+    #number{
+        border:2px solid green;
+        width:55%;
+        height:28px;
+        font-family: monospace;
+    }
+    /*numbers should be within min max and strictly numbers*/
+    #name-label{
+        font-size:20px;
+        font-family: monospace;
+        color:
+    }
+    #email-label{
+        font-size:20px;
+        font-family: monospace;
+    }
+    #number-label{
+        font-size:20px;
+        font-family: monospace;
+    }
+    /*placeholders are required*/
+    #dropdown{
+        border:2px solid green;
+        width:55%;
+        height:28px;
+        font-family: monospace; 
+    }
+    /*radio buttons and checkboxes*/
+    /*text area for additional comment*/
+    #submit{
+        width:30%;
+        padding:2% 2%;
+        font-size:25px;
+        font-family: monospace;
+    }
+    #idea{
+        border:2px solid green;
+        width:55%;
+        height:78px;
+        font-family: monospace;
+    }
+    body{
+        background:linear-gradient(red,rgb(42, 51, 42));
+    }
+    @media all and (min-width:700px){
+        #submit{
+            display: block;
+        }
+    }
+</style>
+<body>
+    <form id="survey-form">
+        <h1 id="title">code roads survey form</h1>
+        <p id="description">Form designed to collect information about user experience as far as learning coding
+            in code roads is concerned, please feel free to answe the questions as the information given will
+            remain private.
+        </p>
+        <br><br>
+        <label for="name" id="name-label">Full Name</label><br>
+        <input type="text" id="name" placeholder="your code roads username"><br><br>
+        <label for="email" id="email-label">Your Email Address</label><br>
+        <input type="email" id="email" placeholder="your email address"><br><br>
+        <label for="number" id="number-label">Your Age</label><br>
+        <input type="number" id="number" min="5" max="200"><br><br>
+        <p>What is your gender</p>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender">
+        <label for="anonymous">Rather not say</label>
+        <input type="radio" id="anonymous" name="gender"><br><br>
+        <p>What do you love about code roads</p>
+        <label for="challenges">Coding challenges</label>
+        <input type="checkbox" id="challenges" value="challenges"><br>
+        <label for="learning">Learning To Code</label>
+        <input type="checkbox" id="learning" value="learning code"><br>
+        <label for="projects">Projects And Ideas</label>
+        <input type="checkbox" id="projects" value="projects"><br>
+        <label for="other">Others</label>
+        <input type="checkbox" id="other" value="other reasons"><br><br>
+        <label for="dropdown">What Language Did You Enjoy Learning In Code Roads</label>
+        <select id="dropdown">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Java Script">Java Script</option>
+            <option value="bootstrap">Bootstrap</option>
+            <option value="Java">Java</option>
+            <option value="C#">C#</option>
+            <option value="python">Python</option>
+        </select><br><br>
+        <label for="idea">WHAT DO YOU THINK WE SHOULD DO TO IMPROVE CODE ROADS MORE</label><br>
+        <textarea id="idea"></textarea><br><br>
+        <button type="submit" id="submit">Finish And Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "radixSort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "radixSort.js",
+  "scripts": {
+    "start": "node radixSort.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
