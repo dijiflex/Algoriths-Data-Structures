@@ -24,12 +24,28 @@ class SinglyLinkedList{
         this.length++;
         return this;
     }
+    pop(){
+        if(!this.head) return undefined;
+        //Loop the list until the 2nd last item
+        let current = this.head;
+        let newTail = current;
+
+        while(current.next){
+            newTail = current;
+            current = current.next;
+        }
+
+        this.tail = newTail;
+        this.next = null;
+        this.length--;
+        if(this.length === 0){
+            this.head = null;
+            this.tail = null;
+        }
+
+        return current;
+    }
 }
 
 let list = new SinglyLinkedList();
 
-// let first = new Node('Hi');
-// first.next = new Node('there');
-// first.next.next = new Node('felix')
-// first.next.next.next = new Node('how');
-// first.next.next.next.next = new Node('are')
