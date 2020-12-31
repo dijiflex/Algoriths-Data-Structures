@@ -142,10 +142,11 @@ class SinglyLinkedList{
             this.print()
         }
 
-        
         return this;
     } 
 
+
+    
     print(){
         let arr = [];
         let current = this.head;
