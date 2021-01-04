@@ -1,23 +1,23 @@
 class Node {
-    constructor(val){
+    constructor(val) {
         this.val = val;
         this.next = null;
         this.prev = null;
     }
 }
 
-class DoublyLinkedList{
-    constructor(){
+class DoublyLinkedList {
+    constructor() {
         this.head = null;
         this.tail = null;
         this.length = 0;
 
     }
 
-     //PUSH
-     push (val){
+    //PUSH
+    push(val) {
         let newNode = new Node(val);
-        if(this.length == 0){
+        if (this.length == 0) {
             this.head = newNode;
             this.tail = newNode;
         } else {
@@ -32,11 +32,11 @@ class DoublyLinkedList{
     }
 
     /// POP
-    pop(){
-        if(!this.head) return undefined;
+    pop() {
+        if (!this.head) return undefined;
 
         const poppedNode = this.tail;
-        if(this.length === 1){
+        if (this.length === 1) {
             this.head = null;
             this.tail = null;
         } else {
@@ -51,13 +51,13 @@ class DoublyLinkedList{
 
     }
 
-    shift(){
-        if(this.length === 0) return undefined;
+    shift() {
+        if (this.length === 0) return undefined;
         const oldHead = this.head;
-        if(this.length === 1){
+        if (this.length === 1) {
             this.head = null;
             this.tail = null;
-        }else{
+        } else {
             this.head = oldHead.next;
             this.head.prev = null;
             oldHead.next = null;
@@ -66,9 +66,9 @@ class DoublyLinkedList{
         return oldHead;
     }
 
-    unshift(val){
+    unshift(val) {
         const newNode = new Node(val);
-        if(this.length === 0) {
+        if (this.length === 0) {
             this.head = newNode;
             this.tail = newNode;
         } else {
@@ -80,29 +80,39 @@ class DoublyLinkedList{
         return this;
     }
 
-     //GET
-     get (index){
-        if(index < 0 || index >= this.length) null;
-           let current, count;
-        if(index <= this.length/2){
+    //GET
+    get(index) {
+        if (index < 0 || index >= this.length) null;
+        let current, count;
+        if (index <= this.length / 2) {
             count = 0;
             current = this.head;
-            while(count !== index){
+            while (count !== index) {
                 current = current.next;
                 count++;
             }
-          
+
         } else {
-           count = this.length -1;
-           current = this.tail;
-            while(count !== index){
+            count = this.length - 1;
+            current = this.tail;
+            while (count !== index) {
                 current = current.prev;
                 count--;
             }
-            
+
         }
 
         return current;
-        
+
+    }
+
+    //set
+    set(index, val) {
+        const foundNode = this.get(index);
+        if (foundNode != null) {
+            foundNode.val = val;
+            return true;
+        }
+        return false;
     }
 }
