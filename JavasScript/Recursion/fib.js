@@ -15,6 +15,8 @@ sum of the previous two numbers
 // function fib(num) {
 //     let arr = [1, 1];
 
+//     console.log(arr);
+
 //     function recursive(num){
 //         if(arr.length === num) return;
 //         let next = arr[arr.length - 1] + arr[arr.length - 2];
@@ -27,7 +29,7 @@ sum of the previous two numbers
 // }
 
 
-//Most optimal solution /// pending understanding
+// Most optimal solution /// pending understanding
 function fib(n){
     if (n <= 2) return 1;
     return fib(n-1) + fib(n-2);
@@ -35,4 +37,4 @@ function fib(n){
 
 
 
-console.log(fib(4));
+console.log(fib(28));
