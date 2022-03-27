@@ -85,3 +85,8 @@ let ER = new PriorityQueue();
  ER.enqueue('comming', 1);
  ER.enqueue('gunshow wound', 5)
  ER.enqueue('high fever', 2)
+
+//  Bio O of Binary Heaps 
+// Insertion - O(log n)
+// Removal - O(log n)
+// Searching - O(n)

@@ -2,6 +2,7 @@
 
 // input:  arr = [8, 10, 2]
 // output: [20, 16, 80] 
+// using division multipy all values and divide final nyith value
 
 /*
 [8,10,2,3]

@@ -6,6 +6,7 @@ class MaxBinaryHeap {
         this.values.push(element);
         this.bubbleUp();
     }
+
     bubbleUp(){
         let idx = this.values.length - 1;
         const element = this.values[idx];
@@ -21,23 +22,20 @@ class MaxBinaryHeap {
     }
 
     extractMax(){
-        const max =  this.values[0];
+        const max = this.values[0];
         const end = this.values.pop();
 
         if(this.values.length > 0){
-            this.values[0] = end;
+        this.values[0] = end;
 
         //Start trickleDown
         this.sinkDown();
         }
         
         return max;
-
-        
     }
 
     sinkDown(){
-
         let idx = 0;
         const length = this.values.length;
         const element = this.values[0];
