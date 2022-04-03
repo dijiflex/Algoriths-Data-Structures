@@ -24,7 +24,7 @@ class SinglyLinkedList{
         this.length++;
         return this;
     }
-    pop(){
+    pop(){ 
         if(!this.head) return undefined;
         //Loop the list until the 2nd last item
         let current = this.head;
@@ -36,7 +36,7 @@ class SinglyLinkedList{
         }
 
         this.tail = newTail;
-        this.next = null;
+        this.tail.next = null;
         this.length--;
         if(this.length === 0){
             this.head = null;
@@ -60,7 +60,7 @@ class SinglyLinkedList{
         let newNode = new Node(value);
         if(!this.head) {
             this.head = newNode;
-            this.tail = newNode;
+            this.tail = this.newNode;
         } else{
             newNode.next = this.head;
         this.head = newNode;
@@ -127,6 +127,14 @@ class SinglyLinkedList{
     }
 
     reverse(){
+        //swap head and tail 
+        //create a variable called next, prev, node
+        //set prev to null
+        //set node to head
+        // loop through the list
+        // set next to the next property of whatever node is
+        // set the next property of node to prev
+
         let node = this.head; 
         this.head = this.tail; 
         this.tail = node; 

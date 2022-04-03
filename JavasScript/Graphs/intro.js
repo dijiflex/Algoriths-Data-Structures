@@ -16,4 +16,9 @@ A graph data structure consists of a finite (and possibly mutable) set
 
   //Storing data in a graph
   1. Adjacency Matrix
+  2. Adjacency List
+  [
+      [1,5],
+      [0,2]
+  ]
 */

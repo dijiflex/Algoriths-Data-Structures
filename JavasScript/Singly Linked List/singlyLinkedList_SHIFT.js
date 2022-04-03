@@ -36,12 +36,12 @@ class SinglyLinkedList{
         }
 
         this.tail = newTail;
-        this.next = null;
+        this.tail.next = null;
         this.length--;
         if(this.length === 0){
             this.head = null;
             this.tail = null;
-        }
+        }  
 
         return current;
     }
@@ -52,11 +52,12 @@ class SinglyLinkedList{
         this.length--;
         if(this.length === 0){
             this.tail = null;
-        }
+        }     
         return currentHead;
     }
 }
 
 
 let list = new SinglyLinkedList();
+
 

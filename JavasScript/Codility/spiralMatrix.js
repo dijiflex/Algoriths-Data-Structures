@@ -7,7 +7,8 @@ const spriralOrder = (matrix) => {
     let maxRow = matrix.length - 1;
     let maxCol = matrix[0].length - 1;
     let direction = 0;
-    // 0 = right, 1 = down, 2 = left, 3 = up
+    // 0 = right, 1 = down, 2 = left, 3 = up    
+    // direction = (direction + 1) % 4;
     while (row <= maxRow && col <= maxCol) {
         if (direction === 0) {
         for (let i = col; i <= maxCol; i++) {
@@ -30,6 +31,7 @@ const spriralOrder = (matrix) => {
         }
         col++;
         }
+        // direction = (direction + 1) % 4;
         direction = (direction + 1) % 4;
     }
     return result;
