@@ -11,7 +11,7 @@ function pivot(arr, start = 0, end = arr.length + 1) {
 
     for (var i = start + 1; i < arr.length; i++) {
         if (pivot > arr[i]) {
-            swapIdx++;
+            swapIdx++; 
             swap(arr, swapIdx, i);
             // console.log(arr);
         }

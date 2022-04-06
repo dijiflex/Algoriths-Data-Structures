@@ -6,6 +6,13 @@ class Node {
     }
 }
 
+/*
+preOrder  [8,6,5,7,9,10, 45] root, left, right
+postOrder [5,7,6,10,45,9,8] left, right, root
+inorder  [5, 6, 7, 8, 9, 10, 11, 45 ] left, root, right
+
+*/
+
 class BinarySearchTree {
     constructor(){
         this.root = null
